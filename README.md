@@ -57,7 +57,7 @@
 # 5. 본인 소개
 
 |이름 |이정환|![이정환](/이정환.jpg)|
-|연락처 | ljhwan8111(@)naver.com|
+|연락처 | ljhwan8111@naver.com|
 |skill set| Language - C, JAVA, Python, HTML/CSS/Javascript|
 | | Frameword - Spring, Flask, React, JPAOracle, MySQL|
 | | Database - Oracle, MySQL|
