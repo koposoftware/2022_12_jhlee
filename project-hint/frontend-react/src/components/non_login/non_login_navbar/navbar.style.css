@@ -1,0 +1,71 @@
+@import "../../../style.css";
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* 1 */
+
+.nav-container {
+  display: flex;
+  /* position: fixed; */
+
+  width: 100vw;
+  height: 64px;
+  /*background-color: var(--hana-green);*/
+  background-color: #EDEDED;
+  border-bottom: var(--hana-green) 4px solid;
+  /*border: var(--hana-green)*/
+  /*animation: border_anim 2s linear forwards;*/
+}
+/*@keyframes border_anim {*/
+/*  0%{*/
+/*    width: 15%;*/
+/*  }*/
+/*  100%{*/
+/*    width: 100%;*/
+/*  }*/
+/*}*/
+
+.btn-container {
+  flex: 1;
+
+  padding-top: 16px;
+  padding-right: 25px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-p {
+  padding-right: 7px;
+}
+
+.logo-container {
+  height: 64px;
+  width: 160px;
+  /*background-color: var(--hana-green);*/
+  background-color: #EDEDED;
+  border-bottom: var(--hana-green) 4px solid;
+  /*border-top-right-radius: 32px;*/
+  /*border-bottom-right-radius: 32px;*/
+  display: flex;
+  padding-left: 16px;
+  align-items: center;
+  /*border: var(--hana-green) 0px 0px 1px 1px solid;*/
+}
+
+.nav-btn {
+  /*font-size: 1rem;*/
+  /* padding-right: 7px; */
+
+  font-size: 13px;
+  font-family: NotoSansKR-R, sans-serif;
+  color: white;
+  width: 80px;
+  height: 33px;
+  border: 1px solid white;
+  border-radius: 16px;
+  outline: none;
+}

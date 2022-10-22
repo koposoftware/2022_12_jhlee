@@ -1,0 +1,119 @@
+@import "../../../../style.css";
+
+.recent_container {
+  font-size: 30px;
+  height: 340px;
+}
+
+.test {
+  /*height: 30px;*/
+  margin-bottom: 15px;
+}
+
+.news_title_section {
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+  /*font-family: "NotoSansKR-B", sans-serif;*/
+  /*border: 1px solid;*/
+}
+
+.news_title {
+  font-size: 50px;
+  width: 600px;
+  height: 30px;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  /*position: relative;*/
+  /*border: 1px solid;*/
+}
+
+.news_regdate {
+  /*font-family: HanaLHanaL, sans-serif;*/
+  font-family: NotoSansKR-L, sans-serif;
+  position: relative;
+  left: 115px;
+  color: gray;
+  font-size: 16px;
+  width: 100px;
+  height: 30px;
+  text-align: right;
+  overflow: hidden;
+  /*background-color: var(--white-four);*/
+  /*border: 1px solid;*/
+}
+
+.news_title_style {
+  /*font-family: NotoSansKR-L, sans-serif;*/
+  font-size: 17px;
+  margin-left: 5px;
+}
+
+/*.marquee {*/
+/*  width:600px;*/
+/*  !*padding:0.5em 0;*!*/
+/*  overflow:hidden;*/
+/*  background-color: var(--white-four);*/
+/*  !*margin-bottom:10px;*!*/
+/*  !*position:relative;*!*/
+/*}*/
+
+/*.marquee p:after {*/
+/*  content:"";*/
+/*  white-space:nowrap;*/
+/*  padding-right:50px;*/
+/*}*/
+
+/*.marquee p {*/
+/*  margin:0;*/
+/*  padding-left:600px;*/
+/*  display:inline-block;*/
+/*  white-space:nowrap;*/
+/*  -webkit-animation-name:marquee;*/
+/*  -webkit-animation-timing-function:linear;*/
+/*  -webkit-animation-duration:7.5s;*/
+/*  -webkit-animation-iteration-count:infinite;*/
+/*  -moz-animation-name:marquee;*/
+/*  -moz-animation-timing-function:linear;*/
+/*  -moz-animation-duration:7.5s;*/
+/*  -moz-animation-iteration-count:infinite;*/
+/*  -ms-animation-name:marquee;*/
+/*  -ms-animation-timing-function:linear;*/
+/*  -ms-animation-duration:7.5s;*/
+/*  -ms-animation-iteration-count:infinite;*/
+/*  -o-animation-name:marquee;*/
+/*  -o-animation-timing-function:linear;*/
+/*  -o-animation-duration:7.5s;*/
+/*  -o-animation-iteration-count:infinite;*/
+/*  animation-name:marquee;*/
+/*  animation-timing-function:linear;*/
+/*  animation-duration:7.5s;*/
+/*  animation-iteration-count:infinite;*/
+/*}*/
+/*@-webkit-keyframes marquee {*/
+/*  from   { -webkit-transform: translate(0%);}*/
+/*  99%,to { -webkit-transform: translate(-100%);}*/
+/*}*/
+/*@-moz-keyframes marquee {*/
+/*  from   { -moz-transform: translate(0%);}*/
+/*  99%,to { -moz-transform: translate(-100%);}*/
+/*}*/
+/*@-ms-keyframes marquee {*/
+/*  from   { -ms-transform: translate(0%);}*/
+/*  99%,to { -ms-transform: translate(-100%);}*/
+/*}*/
+/*@-o-keyframes marquee {*/
+/*  from   { -o-transform: translate(0%);}*/
+/*  99%,to { -o-transform: translate(-100%);}*/
+/*}*/
+/*@keyframes marquee {*/
+/*  from   { transform: translate(0%);}*/
+/*  99%,to { transform: translate(-100%);}*/
+/*}*/
+/*.marquee p:hover {*/
+/*  -moz-animation-play-state: paused;*/
+/*  -webkit-animation-play-state: paused;*/
+/*  animation-play-state: paused;*/
+/*}*/

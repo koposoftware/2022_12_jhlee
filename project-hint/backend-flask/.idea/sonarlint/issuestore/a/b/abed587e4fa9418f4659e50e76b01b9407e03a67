@@ -1,0 +1,14 @@
+
+Bpython:S14810"%Remove the unused local variable "e".(ÀÚŸûÿÿÿÿ
+;python:S125("Remove this commented out code.(¥Ñöıÿÿÿÿ
+;python:S125,"Remove this commented out code.(×õ©şÿÿÿÿ
+python:S117G"eRename this local variable "dfFinancialStatement" to match the regular expression ^[_a-z][a-z0-9_]*$.(“Ó¾Ìøÿÿÿÿ
+ypython:S117@"bRename this local variable "dfIncomeStatement" to match the regular expression ^[_a-z][a-z0-9_]*$.(æíïÓ
+xpython:S117L"\Rename this local variable "listFinance" to match the regular expression ^[_a-z][a-z0-9_]*$.(ŒßİÚùÿÿÿÿ
+}python:S117H"gRename this local variable "listFinancialStatement" to match the regular expression ^[_a-z][a-z0-9_]*$.(Şê¯T
+{python:S117A"dRename this local variable "listIncomeStatement" to match the regular expression ^[_a-z][a-z0-9_]*$.(íøğ¾
+wpython:S117<"[Rename this local variable "listTicker" to match the regular expression ^[_a-z][a-z0-9_]*$.(È×ÂØıÿÿÿÿ
+}python:S117:"fRename this local variable "rowFinancialStatement" to match the regular expression ^[_a-z][a-z0-9_]*$.(¬§üŠ
+zpython:S1179"cRename this local variable "rowIncomeStatement" to match the regular expression ^[_a-z][a-z0-9_]*$.(Ï·˜ë
+Tpython:S5754B"<Specify an exception class to catch or reraise the exception(ˆÊÉ·
+Tpython:S5754I"<Specify an exception class to catch or reraise the exception(ˆÊÉ·

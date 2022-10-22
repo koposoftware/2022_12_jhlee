@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js">
+    </script>
+    <script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+    </style>
+    <style>
+        div#content {
+            display: none;
+        }
+
+        div#loading {
+            top: 200 px;
+            margin: auto;
+            position: absolute;
+            z-index: 1000;
+            width: 160px;
+            height: 24px;
+            background: url(loadingimage.gif) no-repeat;
+            cursor: wait;
+        }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V2ST7N3ZY3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-V2ST7N3ZY3');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5548835221228418"
+        crossorigin="anonymous"></script>
+</head>
+
+<body id="mainbody">
+    <div id="loading"></div>
+    <div class="container" style="position: relative; top: 90px; width: 500px; left: 20px;">
+
+        <h3 class="mt-3" style="padding-bottom: 30px; color:#73879C;">&nbsp;&nbsp;&nbsp;&nbsp;종목코드와 구간설정이 필요합니다.</h3>
+<!--         <p class="text-left mt-3"><b>종목 코드</b>를 입력해 주세요.</p> -->
+
+        <form action="{{ url_for('index_inner_chart') }}" method="post">
+            <div class="form-group" id="aaa">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1" style="color:#73879C;">종목 코드</span>
+                    </div>
+                    {% if code %}
+                    <input type="text" class="form-control" placeholder="종목코드 입력" aria-label="Username" value="{{code}}"
+                        aria-describedby="basic-addon1" name="code">
+                    {% else %}
+                    <input type="text" class="form-control" placeholder="종목코드 입력" aria-label="Username" value="{{stock_code}}"
+                        aria-describedby="basic-addon1" name="code">
+                    {% endif %}
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1" style="color:#73879C;">코드 검색</span>
+                    </div>
+                    <input id="search_input" name="search_input" autocomplete="off" type="text" class="form-control"
+                           placeholder="코드를 알고 싶은 종목을 입력하세요." style="">
+                    <div id="resdiv" style="position: absolute; left: 90px;z-index:3;background-color:#F7F7F7;width:81%;margin-top:50px;"></div>
+                </div>
+            </div>
+<!--             {% if chart %}
+                 <p class="text-left"><b>기간</b>을</p>
+            {% endif %} -->
+<!--             <p class="text-left"><b>기간</b>을 설정해 주세요.</p> -->
+            <div class="form-group">
+                <div class="row">
+                    <div class='col-md-3'>
+                        <div class="form-group" style="width:200px; position:relative; top: 90px;">
+                            <label for="exampleFormControlSelect1" style="color:#73879C;">시작일</label>
+                            <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                                {% if startdate %}
+                                <input type="text" class="form-control datetimepicker-input"
+                                    data-target="#datetimepicker1" value="{{startdate}}" name="startdate">
+                                {% else %}
+                                <input type="text" class="form-control datetimepicker-input"
+                                    data-target="#datetimepicker1" value="" name="startdate">
+                                {% endif %}
+                                <div class="input-group-append" data-target="#datetimepicker1"
+                                    data-toggle="datetimepicker">
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='col-md-3'>
+                        <div class="form-group" style="width:200px; position:relative; left:143px; top: 90px;">
+                            <label for="exampleFormControlSelect1" style="color:#73879C;">종료일</label>
+                            <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
+                                {% if enddate %}
+                                <input type="text" class="form-control datetimepicker-input"
+                                    data-target="#datetimepicker2" value="{{enddate}}" name="enddate" style="width: 300px;">
+
+                                {% else %}
+                                <input type="text" class="form-control datetimepicker-input"
+                                    data-target="#datetimepicker2" value="" name="enddate">
+                                {% endif %}
+
+                                <div class="input-group-append" data-target="#datetimepicker2"
+                                    data-toggle="datetimepicker">
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group mb-3" style="position: relative; top: 100px;">
+                <input type="submit" class="btn btn-danger btn-block" name="action" onclick="LoadingWithMask();"
+                    value="차트 보기">
+            </div>
+            
+            <div id="loadingcontainer"></div>
+        </form>
+<!--         <input type="button" class="btn btn-warning mt-3 mb-3" onClick="sendLinkCustom();" value="카카오톡 공유하기" /> -->
+    </div>
+
+</body>
+
+<script>
+    $(document).on('keyup', '#search_input', function () {
+
+        $.ajax({
+            url: "/com_search_code",
+            type: "post",
+            data: {"search_input": $("#search_input").val()},
+            success: function (flask_return_str) {
+                console.log(flask_return_str);
+                //------------String -- 객체 로 변환 -------------
+                let flask_return_list = JSON.parse(flask_return_str)
+                console.log(flask_return_list);
+
+                html_str = "<table>"
+                //-------------------------------------------------
+                $.each(flask_return_list, function (i, v) {
+                    //i 0   v ['smith', 1400]
+                    //i 1   v ['allen', 4000]
+                    console.log(v[0], v[1]);
+                    html_str += "<tr><td><div style='color: #73879C;background-color: #F7F7F7;border:0; outline:0;'>" + v[1] + " " + v[0] + "</div></td></tr>"
+                });
+                html_str += "</table>"
+                $("#resdiv").empty();
+                $("#resdiv").html(html_str);
+            },
+            error: function (res) {
+            },
+            crossDomain: true
+
+        });
+    });
+    
+
+//     $(document).on("click", "#mainbody", function (e) {
+//         if (!$(e.target).is('#export')) {
+//             $("#resdiv").empty();
+//         }
+//     });
+    
+    $(document).click(function (e) {
+        if (!$(e.target).is('#aaa')) {
+            $("#resdiv").empty();
+        }
+    });
+    
+</script>
+
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker1').datetimepicker({
+            format: 'YYYY-MM-DD',
+            useCurrent: false
+        });
+        $('#datetimepicker2').datetimepicker({
+            format: 'YYYY-MM-DD',
+            useCurrent: false
+        });
+        $("#datetimepicker1").on("change.datetimepicker", function (e) {
+            $('#datetimepicker2').datetimepicker('minDate', e.date);
+        });
+        $("#datetimepicker2").on("change.datetimepicker", function (e) {
+            $('#datetimepicker1').datetimepicker('maxDate', e.date);
+        });
+//         Kakao.init("59b5bdc754eaf8aea2e4c6471b2f29cf");
+    });
+
+    function LoadingWithMask() {
+        
+        //화면의 높이와 너비를 구합니다.
+        var maskHeight = $(document).height();
+        var maskWidth = window.document.body.clientWidth;
+
+        //화면에 출력할 마스크를 설정해줍니다.
+        var mask =
+            "<div id='mask' style='position:absolute; z-index:9000; background-color:#000000; display:none; left:0; top:0;'></div>";
+        var loadingImg = '';
+//         loadingImg += "<p class='text-center'><b>찾는 중입니다. 잠시만 기다려 주세요.</b></p>"
+        loadingImg += "<div id='loadingImg'>";
+        loadingImg +=
+            " <img src='https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif' style='width: 50px; height: 50px; position: relative; display: block; margin: 0px auto; bottom: 150px;'/>";
+        loadingImg += "</div>";
+
+        //화면에 레이어 추가
+        $('body')
+            .append(mask)
+
+        $('#loadingcontainer').append(loadingImg)
+
+        //마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채웁니다.
+        $('#mask').css({
+            'width': maskWidth,
+            'height': maskHeight,
+            'opacity': '0.1'
+        });
+
+        //마스크 표시
+        $('#mask').show();
+
+        //로딩중 이미지 표시
+        $('#loadingImg').show();
+    }
+
+    function closeLoadingWithMask() {
+        $('#mask, #loadingImg').hide();
+        $('#mask, #loadingImg').remove();
+    }
+
+</script>
+
+</html>

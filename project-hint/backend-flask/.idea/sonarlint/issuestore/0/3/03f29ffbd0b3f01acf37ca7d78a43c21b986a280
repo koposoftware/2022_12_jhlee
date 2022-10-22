@@ -1,0 +1,10 @@
+
+jpython:S1854"MRemove this assignment to local variable 'df_today'; the value is never used.(êˆßëøÿÿÿÿ
+Epython:S1481"-Remove the unused local variable "yesterday".(‹â“ý
+6python:S125"Remove this commented out code.(»žƒŠ
+Gpython:S1656"/Remove or correct this useless self-assignment.(›ÌÐ–
+6python:S125"Remove this commented out code.(€âŸž
+6python:S125!"Remove this commented out code.(©ó¼ 
+6python:S125#"Remove this commented out code.(¦»×à
+Gpython:S16567"/Remove or correct this useless self-assignment.(›ÌÐ–
+Bpython:S125J"Remove this commented out code.(¿œØóûÿÿÿÿ8¿ŒßÙ±0

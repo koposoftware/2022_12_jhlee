@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="13ec38d3-1c87-4e62-a66b-3287f7b9e2f4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/frontend-react.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/5/051def3a04a7bda796454ee29d23c8b762213924" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/9/0932ffb785a8bac18c3c507bf82dee61fa88654e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/6/16ed364ff3fba70b114b9f7e6e4bb21bb806ccbd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/220f769ee4fad57be4d90ff40f3bcc9a1e05cee5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3cf2a8a265e7bd22af8f9e439138c9eab4e3f2b1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/2/424c9fb6f0ce72018b0de36b716d2498c14a06b3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/3/43d462b48533cf002a401ceab64e13f339ea9c73" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/9/4946490fcef2a8d16adb122a7bc058db2023b84d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4cde0fadb51f89bb8d722c6c7194d18057f1982e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/d/4d38f8170c06180097381e3a0b8fb6929566bcc8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/1/51b32fda0ec54bf1e9bfd07c2441b1c68f8c2965" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/2/5209ae6c17c08ef54ddd592830f440c6b21d5629" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/3/53b70e44d9abfd9e253cdd6f1b00f809c9fe17a7" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/7/57db18a32909e840e0a23af91e336476bdb2a543" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/671842de9a1f9bea90b2b8b98c3f1076c01c8e95" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/7/678b699636509b42d16841c08a56f19a9fe01327" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/0/70b463030debc86848737f404d9e506d69747346" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/5/75733d22662d8473caba93d1d06a4c28d4577bec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/a/8ad438a309b2ef8bf34816ea1b96696294948230" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8fc9bc0fe42b35ab1f060e450cb69cbf989b166b" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/920ab6ab4a57ee20a36df4e3e2e73b70f9969d14" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/9514807fc5af0f46bcf9d8a7ad1d651cff34c36a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/8/98064aff55bd155eaa0871dc6f8af709724f3b75" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b6790e5b6e392a3a845620b7606e0c0cffd797e8" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b6de5919761243e9735c38c91ede0ba7155e5639" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/b/bb00c12e2e05c81e5eb867750e66acf42f30c278" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/c/bc665454df2691ee67c4243a8e5c253ba70c1c44" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/d/bd59ba8e2f58b013ebf2d217a0572c68c1554f21" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c5fd3201494e82cf94e6a681cdc535b306134e1a" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/9/c9a00ba19452054dcaf43647966b55317e286ab4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/d/cd3551f2d1fef3529ced77db1a07c525fe14df03" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/0/d07b7fcd05e48975877cc8028b75bbb4a8b667ab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d3ef71a2c95472fef9aa8d99bf55028ac09224ed" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/d/dd8046109ebeae970d561056d37174e89ada8226" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/7/e7025b2e18e9c685c12a73a5ef142f24c26889bb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/7/e728f4e88eb22fac35411283ca6360281d1cfad2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/8/e88b91afea2bfbdd55e908f4bee7c5e359f4aca1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/b/eb0e07aff09949672beb57a55f3b4ca79b54bf31" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/b/eb20f88fc069c1679d440fab07262c490e4d4ed4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f0b1bb9a8079d329164444d779cbf35950009da4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/home/home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/home/home.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/home/home_main_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/home/home_main_logo_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/home/moreInfo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/home/navbar_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/home/navbar_logo_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/home/userProfile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/home/userProfile_no_shadow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/signIn/kakao.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/signIn/signin_check.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/signUp/search.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/home/Home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/home/LottieButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/home/asset/Asset.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/home/asset/asset.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/home/change_ratio/Change_Ratio_Down.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/home/change_ratio/Change_Ratio_Up.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/home/change_ratio/change_ratio_down.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/home/change_ratio/change_ratio_up.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/home/home.style.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/home/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/home/lotties/analysis.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/home/recent_news/Recent_News.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/home/recent_news/recent_news.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/home/recent_opinion/Recent_Opinion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/home/recent_opinion/recent.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/home/recommendation_stock/RecommendationStock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/home/recommendation_stock/recommendation_stock.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/home/wordcanvas/WordCanvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/items/ModalBuying.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/items/ModalSelling.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/items/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/items/modal.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/logined_navbar/Navbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/logined_navbar/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/logined_navbar/navbar.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/menu/Menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/menu/menu.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/my_page/MyPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/my_page/account_setting/AccountSetting.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/my_page/account_setting/withdrawal/Withdrawal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/my_page/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/my_page/invest_profile/InvestProfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/my_page/my_comment/MyComment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/my_page/my_comment/myComment.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/my_page/my_opinion/MyOpinion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/my_page/my_opinion/myOpinion.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/my_page/mypage.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/news/NewsList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/news/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/news/newsDetail/NewsDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/news/newsDetail/newsDetail.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/news/newsList.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/opinion/OpinionList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/opinion/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/opinion/opinionDetail/OpinionDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/opinion/opinionDetail/opinionDetail.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/opinion/opinionEdit/OpinionEdit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/opinion/opinionEdit/opinionEdit.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/opinion/opinionList.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/opinion/opinionRegister/OpinionRegister.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/opinion/opinionRegister/opinionRegister.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/portfolio/PortfolioPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/portfolio/budget_history/BudgetHistory.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/portfolio/budget_history/budgetHistory.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/portfolio/holding_shares/HoldingShares.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/portfolio/holding_shares/holdingShares.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/portfolio/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/portfolio/portfoliopage.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/portfolio/totalbudget/TotalBudget.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/portfolio/totalbudget/totalbudget.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/search/Search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/search/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/search/search.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/search/search_item/SearchNews.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/search/search_item/SearchStock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/search/search_item/searchNews.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/search/search_item/searchStock.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/stocks/StockList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/stocks/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/stocks/stockList.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/stocks/stock_detail/CandleChart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/stocks/stock_detail/RealtimeChart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/stocks/stock_detail/StockDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/stocks/stock_detail/StockPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/stocks/stock_detail/TimeChart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/stocks/stock_detail/stockDetail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/stocks/stock_detail/stockPage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/login/stocks/stock_detail/timeChart.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/non_login/auth/Auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/non_login/auth/findPassword/FindPassword.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/non_login/auth/signin/SignIn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/non_login/auth/signin/signin.style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/non_login/auth/signup/SignUp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/non_login/auth/signup/signup.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/non_login/auth/signup/signup.style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/non_login/first_invest_profile/FirstInvestProfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/non_login/first_invest_profile/firstinvestprofile.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/non_login/first_invest_profile/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/non_login/non_login_navbar/Navbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/non_login/non_login_navbar/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/non_login/non_login_navbar/navbar.style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/non_login/welcome/Welcome.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/non_login/welcome/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/non_login/welcome/welcome.style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/useInterval.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/assetContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/stockContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fonts/Baloo.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fonts/HanaB.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fonts/HanaCM.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fonts/HanaL.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fonts/HanaM.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fonts/HanaUL.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fonts/NanumSquareB.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fonts/NanumSquareEB.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fonts/NanumSquareL.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fonts/NanumSquareR.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/setAuthorizationToken.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2DtxFLM4mB26swDJB39MhNHAK9l" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/hwaner/Documents/workspace/project-hint/frontend-react/src/components/login/home/lotties&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.30689654&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/hwaner/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/221.6008.13/IntelliJ IDEA.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/login/home/lotties" />
+      <recent name="$PROJECT_DIR$/src/components/login/home/change_ratio" />
+      <recent name="$PROJECT_DIR$/src/components/login/stocks/stock_detail" />
+      <recent name="$PROJECT_DIR$/src/components/login/home/wordcanvas" />
+      <recent name="$PROJECT_DIR$/src/components/non_login/auth/signup" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/login/home/lotties" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="13ec38d3-1c87-4e62-a66b-3287f7b9e2f4" name="Changes" comment="" />
+      <created>1661532076796</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661532076796</updated>
+      <workItem from="1661532077976" duration="4291000" />
+      <workItem from="1661536472687" duration="114703000" />
+      <workItem from="1662445715141" duration="8182000" />
+      <workItem from="1662455806856" duration="17987000" />
+      <workItem from="1662524211269" duration="40031000" />
+      <workItem from="1662649019263" duration="2315000" />
+      <workItem from="1663043295604" duration="6167000" />
+      <workItem from="1663126530548" duration="1164000" />
+      <workItem from="1663128351398" duration="3000" />
+      <workItem from="1663133153753" duration="83917000" />
+      <workItem from="1664194341275" duration="1407000" />
+      <workItem from="1664346338370" duration="221000" />
+      <workItem from="1664435064370" duration="316000" />
+      <workItem from="1664441587414" duration="16000" />
+      <workItem from="1664500798242" duration="93000" />
+      <workItem from="1664501462660" duration="12103000" />
+      <workItem from="1664862956813" duration="25141000" />
+      <workItem from="1665981921316" duration="1533000" />
+      <workItem from="1666257118506" duration="26000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

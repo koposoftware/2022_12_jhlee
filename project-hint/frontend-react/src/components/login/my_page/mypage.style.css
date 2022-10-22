@@ -1,0 +1,81 @@
+@import "../../../style.css";
+
+.documentroom_container {
+  width: 1080px;
+  height: 1000px;
+  flex-direction: column;
+  margin-left: 83px;
+  margin-top: 42px;
+}
+
+.documentroom_text {
+  font-family: NotoSansKR-M, sans-serif;
+  font-size: 22px;
+}
+
+.link-list-tab {
+  margin-top: 15px;
+  margin-left: 50px;
+  position: relative;
+  left: 130px;
+  width: 160px;
+  height: 45px;
+  color: white;
+  background-color: var(--hana-green);
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 25px;
+
+  background-size: 300% 100%;
+
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.link-list-tab:hover {
+  /*text-decoration: underline;*/
+  cursor: pointer;
+
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.tab_container {
+  position: absolute;
+  /*padding-right: 30px;*/
+  left: 420px;
+  /*top: 10px;*/
+  /*border-bottom: 1px solid;*/
+}
+
+.tab_content_container {
+  padding-top: 75px;
+  padding-left: 320px;
+}
+
+.link-list-tab:focus {
+  outline: none;
+}
+
+.link-list-tab.color-6 {
+  background-image: linear-gradient(to right, #009245, #FCEE21, #00A8C5, #D9E021);
+  box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+}
+
+.link-list-tab.color-5 {
+  background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+  box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+}
+
+.link-list-tab.color-1 {
+  /*background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);*/
+  background-image: linear-gradient(to right, var(--hana-green), #40e495, #30dd8a, #2bb673);
+  /*box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);*/
+}

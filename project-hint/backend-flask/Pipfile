@@ -1,0 +1,32 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+jinja2 = "*"
+pandas = "*"
+numpy = "*"
+scipy = "*"
+sklearn = "*"
+matplotlib = "*"
+nltk = "*"
+selenium = "*"
+pandas-datareader = "*"
+finance-datareader = "*"
+beautifulsoup4 = "*"
+requests = "*"
+konlpy = "*"
+flask-cors = "*"
+pykrx = "*"
+apscheduler = "*"
+mysqlclient = "*"
+mysql-connector-python = "*"
+sqlalchemy = "*"
+openpyxl = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

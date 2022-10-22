@@ -1,0 +1,6 @@
+
+dpython:S1192""LDefine a constant instead of duplicating this literal 'html.parser' 4 times.(´ÈñÉ
+6python:S125"Remove this commented out code.(í¬Ó¶
+6python:S125"Remove this commented out code.(Ó„Üß
+tpython:S117"XRename this local variable "regDate" to match the regular expression ^[_a-z][a-z0-9_]*$.(»ëÏøüÿÿÿÿ
+Jpython:S58062"+Rename this variable; it shadows a builtin.(¬Üø8èËß¸0

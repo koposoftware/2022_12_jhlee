@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>종목 분석</title>
+
+    <!-- Bootstrap -->
+    <link href="/static/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="/static/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="/static/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="/static/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
+    <!-- bootstrap-progressbar -->
+    <link href="/static/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="/static/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <!-- bootstrap-daterangepicker -->
+    <link href="/static/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="/static/css/custom.css" rel="stylesheet">
+
+    <!--    google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+    <style>
+        .loader {
+            border: 16px solid #f3f3f3; /* Light grey */
+            border-top: 16px solid #26B99A; /* Blue */
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .lightgreen {
+            color: #26B99A;
+        }
+
+        .loading span {
+            display: inline-block;
+            margin: 0 -.075em;
+            animation: loading .7s infinite alternate;
+        }
+
+        .loading span:nth-child(2) {
+            animation-delay: .1s;
+        }
+
+        .loading span:nth-child(3) {
+            animation-delay: .2s;
+        }
+
+        .loading span:nth-child(4) {
+            animation-delay: .3s;
+        }
+
+        .loading span:nth-child(5) {
+            animation-delay: .4s;
+        }
+
+        .loading span:nth-child(6) {
+            animation-delay: .5s;
+        }
+
+        .loading span:nth-child(7) {
+            animation-delay: .6s;
+        }
+
+        @keyframes loading {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(0.8);
+            }
+        }
+    </style>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        html { overflow-y:scroll; }
+        
+        iframe {
+            border: none;
+        }
+    </style>
+</head>
+
+<body class="nav-md" id="jamybody">
+    <div class="container body">
+        <div class="main_container" style="margin-left:0px">
+            <!-- top navigation -->
+            <div class="top_nav" style="margin-left:0px;height:68px;">
+                <div class="nav_menu" style="height:68px;border-bottom: 4px solid #008485;">
+                    <nav>
+                        <div class="nav toggle">
+                            <a href="/" id="menu_toggle">
+                                <div style="height: 0.1px;width: 160px;padding-left: 16px;position:relative;bottom:35px;align-items: center;">
+                                    <img width="129px" height="40px" src="../static/img/navbar_logo.png">
+                                </div>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="http://localhost:3000/home" style="position:relative; left:1420px; top: 0.001px">
+                                <div style="margin-top: 10px; margin-right: 5px;">
+                                    <img width="45px" height="45px" src="../static/img/exit.png">
+                                </div>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- /top navigation -->
+
+            <!-- page content -->
+            <div id="searchman" class="right_col" role="main" style="margin-left:0px">
+                <!-- top tiles -->
+                <div class="row tile_count" style="z-index:1;margin-top:15px;">
+                    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                        <span class="count_top"><font size="4"><b>{{ hidden_corp_name|safe }}</b></font>&nbsp;<font size="2">{{ stock_code|safe }}</font></span>
+                        <div class="count" id="money"><span style="font-size: 30px;">&#8361;&nbsp;</span>{{ res_obj['ent_dict']['today'] }}</div>
+                        <span class="count_bottom">
+                            &nbsp;<i class="{{ res_obj['ent_dict']['color'] }}">
+                                <i class="{{ res_obj['ent_dict']['rate'] }}"></i>
+                                    {{ "%.2f"|format((res_obj['ent_dict']['today'] - res_obj['ent_dict']['eve'])/res_obj['ent_dict']['eve']*100) }}&#37;</i>
+                                        <span id="money2">&nbsp;&nbsp;{{ res_obj['ent_dict']['eve'] }}</span>
+                        </span>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                        <span class="count_top"><font size="3">코스피</font></span>
+                        <div class="count" id="money3">{{ f_info['^KS11'][1] }}</div>
+                        <span class="count_bottom">
+                            &nbsp;<i class="{{ f_info['^KS11']['color'] }}">
+                                <i class="{{ f_info['^KS11']['rate'] }}"></i>
+                                    {{ "%.2f"|format((f_info['^KS11'][1] - f_info['^KS11'][0])/f_info['^KS11'][0]*100) }}&#37;</i>
+                                        <span id="money4">&nbsp;&nbsp;{{ f_info['^KS11'][0] }}</span>
+                        </span>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                        <span class="count_top"><font size="3">코스닥</font></span>
+                        <div class="count" id="money5">{{ f_info['^KQ11'][1] }}</div>
+                        <span class="count_bottom">
+                            &nbsp;<i class="{{ f_info['^KQ11']['color'] }}">
+                                <i class="{{ f_info['^KQ11']['rate'] }}"></i>
+                                    {{ "%.2f"|format((f_info['^KQ11'][1] - f_info['^KQ11'][0])/f_info['^KQ11'][0]*100) }}&#37;</i>
+                                        <span id="money6">&nbsp;&nbsp;{{ f_info['^KQ11'][0] }}</span>
+                        </span>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                        <span class="count_top"><font size="3">나스닥</font></span>
+                        <div class="count" id="money7">{{ f_info['^IXIC'][1] }}</div>
+                        <span class="count_bottom">
+                            &nbsp;<i class="{{ f_info['^IXIC']['color'] }}">
+                                <i class="{{ f_info['^IXIC']['rate'] }}"></i>
+                                    {{ "%.2f"|format((f_info['^IXIC'][1] - f_info['^IXIC'][0])/f_info['^IXIC'][0]*100) }}&#37;</i>
+                                        <span id="money8">&nbsp;&nbsp;{{ f_info['^IXIC'][0] }}</span>
+                        </span>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                       <span class="count_top"><font size="3">S&P 500</font></span>
+                       <div class="count" id="money9">{{ f_info['^GSPC'][1] }}</div>
+                       <span class="count_bottom">
+                           &nbsp;<i class="{{ f_info['^GSPC']['color'] }}">
+                               <i class="{{ f_info['^GSPC']['rate'] }}"></i>
+                                   {{ "%.2f"|format((f_info['^GSPC'][1] - f_info['^GSPC'][0])/f_info['^GSPC'][0]*100) }}&#37;</i>
+                                       <span id="money10">&nbsp;&nbsp;{{ f_info['^GSPC'][0] }}</span>
+                       </span>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                        <span class="count_top"><font size="3">다우 존스</font></span>
+                        <div class="count" id="money11">{{ f_info['^DJI'][1] }}</div>
+                        <span class="count_bottom"><i class="{{ f_info['^DJI']['color'] }}">
+                            &nbsp;<i class="{{ f_info['^DJI']['rate'] }}"></i>
+                                {{ "%.2f"|format((f_info['^DJI'][1] - f_info['^DJI'][0])/f_info['^DJI'][0]*100) }}&#37;</i>
+                                    <span id="money12">&nbsp;&nbsp;{{ f_info['^DJI'][0] }}</span>
+                        </span>
+                    </div>
+                </div>
+                <!-- /top tiles -->
+
+                
+                <!------------------------------- close 차트 및 주가 예측 시작 ----------------->
+                
+                <!-- 차트 start-->
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel tile fixed_height_800 overflow_hidden" style="height: auto;">
+                            <div class="x_title">
+
+                                <h2><b>차트</b></h2>
+                                
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link" style=""><i class="fa fa-chevron-down"></i></a></li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                            
+                            <!------------     차트     ------------>
+                            
+                            <div class="x_content" style="display: none;">
+                                
+                                <iframe src="http://127.0.0.1:5050/chart?stock_code={{stock_code}}" width="1460" height="700" sandbox="allow-forms allow-scripts allow-same-origin allow-top-navigation" scrolling="no" seamless="seamless" frameborder="0">
+                                </iframe>
+                                                                
+                            <!------------     end     ------------>
+
+                                <table class="" style="width:40%;height:60%;"></table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- 주가예측 end-->
+                
+                <!-- 주가예측 start-->
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel tile fixed_height_680 overflow_hidden" style="height: auto;">
+                            <div class="x_title">
+<!--                                 <h2><b>{{ hidden_corp_name | safe }} 주가 예측</b></h2> -->
+                                <h2><b>예측</b></h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                    <li><a class="collapse-link" style=""><i class="fa fa-chevron-down"></i></a></li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <div class="x_content" style="display: none;">
+                                
+                                <!------------     차트     ------------>
+                                
+                                <iframe src="http://127.0.0.1:5050/prediction?stock_code={{stock_code}}" width="1460" height="580" sandbox="allow-forms allow-scripts allow-same-origin allow-top-navigation" scrolling="no" seamless="seamless" frameborder="0">
+                                </iframe>
+                                <!------------     end     ------------>
+                                
+                                <table class="" style="width:40%;height:60%;"></table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- 주가예측 end-->
+
+        <!------------------------------- close 차트 및 주가 예측 end ----------------->
+
+                 <!-- 1번째 카드 로우 시작 -->
+                <div class="row">
+                    <!-- 업종비교 시작 -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="x_panel tile fixed_height_390 overflow_hidden" style="border-radius: 25px;">
+                           <div class="x_title">
+                               <h2><b>유사 업종 비교</b></h2>
+                               <div class="clearfix"></div>
+                           </div>
+
+                           <div class="x_content">
+                            <!--     RADAR CHART     -->
+<!--                                <table class="" style="width:40%;height:60%;"> -->
+<!--                                    <tr> -->
+{#                                <canvas id="MyRadar" class="CanvasRadar" height="45%" width="80%" style="margin-top: 5%;"></canvas>#}
+                                       <canvas id="MyRadar" class="CanvasRadar" width="80%" height="55%" style="margin-top: 1%;"></canvas>
+<!--                                    </tr> -->
+<!--                                </table> -->
+                           </div>
+                        </div>
+                    </div>
+                    <!-- 업종비교 끝 -->
+
+                    <!-- 매출 시작 -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="x_panel tile fixed_height_390 overflow_hidden" style="border-radius: 25px;">
+                            <div class="x_title">
+                                <h2><b> 매출, 당기순이익 추이 </b></h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content" style="margin-top:0%;">
+                                <!--    BAR CHART      -->
+                                <table class="" style="width:80%;">
+                                    <tr>
+{#                                 <canvas id="MyBar" class="CanvasBar" height="40%" width="80%" style="margin: 10px 5px 5px 0;"></canvas>#}
+                                        <canvas id="MyBar" class="CanvasBar" height="55%" width="80%" style="margin: 10px 5px 5px 0;"></canvas>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 매출 끝 -->
+
+                    <!-- 투자의견 -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="x_panel tile fixed_height_390" style="border-radius: 25px;">
+                           <div class="x_title">
+                               <h2><b>투자의견</b></h2>
+                                <div class="clearfix"></div>
+                           </div>
+                            <div class="x_content">
+                                <div class="dashboard-widget-content" style="margin-top:3%;">
+                                    <ul class="quick-list" style="width:30%;margin-top:5%;">
+                                        <!-- 버튼 부분-->
+                                       <li><i class="fa fa-square" style="color: red"></i><a>강력매수</a></li>
+                                       <li><i class="fa fa-square" style="color: #fe8917"></i><a>매수</a></li>
+                                       <li><i class="fa fa-square" style="color: #66b828"></i><a>중립</a></li>
+                                       <li><i class="fa fa-square" style="color: #5793eb"></i><a>매도</a></li>
+                                      <li><i class="fa fa-square" style="color: #305ea2"></i><a>강력매도</a></li>
+                                       <li><i class="fa fa-square" style="color: #F0F3F3"></i><a>의견없음</a></li>
+                                    </ul>
+
+                                    <div class="sidebar-widget" style="width:70%;">
+                                        <canvas id="chart_gauge_01" class="" style="width: 100%; height: 100%;"></canvas>
+                                        <div class="goal-wrapper">
+                                            <span id="gauge-text" class="gauge-value pull-left">79</span>
+                                            <span class="gauge-value pull-left">%</span>
+                                            <span id="goal-text" class="goal-value pull-right">100%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 투자의견 끝 -->
+                </div>
+                <!-- 1번째 카드 로우 끝 -->
+
+
+                <!--2번째 카드 로우 시작-->
+                <div class="row">
+
+                    <!-- 재무제표 시작 -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="x_panel" style="border-radius: 25px;">
+                            <div class="x_title">
+                                <h2><b>재무제표</b> <small>Net Quarter (단위: 억원)</small></h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content" id="ifrs_room" style="font-size: 13px;">
+
+                                {{ ifrs|safe }}
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 재무제표 끝 -->
+
+                    <!-- 관련 뉴스 카드 시작 -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="x_panel" style="border-radius: 25px;">
+                            <div class="x_title">
+                                <h2><b>관련 뉴스</b></h2>
+                            <div class="clearfix"></div>
+                            </div>
+
+                            <div class="x_content">
+                                <div class="dashboard-widget-content">
+                                    <ul class="list-unstyled timeline widget">
+                                        <li>
+                                            {% for v in MY_NEWS %}
+                                                <div class="block">
+                                                    <div class="block_content">
+                                                        <h2 class="title">
+                                                            <a href="{{ v[5] }}" target=”_blank”>{{ v[2] }}</a> <br>
+                                                            <small> {{ v[0] }} </small>
+                                                        </h2>
+                                                        <div class="byline">
+                                                        <span>{{ v[1] }}</span>
+                                                    </div>
+                                                    <p class="excerpt">{{ v[4] }}</p>
+                                                    </div>
+                                                </div>
+                                            {% endfor %}
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 관련 뉴스 카드 끝 -->
+
+                    <!-- 투자예보 카드 시작 -->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="x_panel" style="border-radius: 25px;">
+                            <div class="x_title">
+                                <h2><b>투자예보</b></h2>
+                            <div class="clearfix"></div>
+                            </div>
+
+                            <div class="x_content" style="margin-left:7%;margin-bottom:30px;margin-top:3%;">
+
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <div class="daily-weather">
+                                            <h2 class="day">외국인 매매 주식</h2>
+                                            <h5 align="center">{{ FOREIGN | safe }}주</h5>
+                                            <!--외인 해 뜨면 샀다 비오면 팔았다 폰트 줄이기 TODO-->
+                                            <center>
+                                                <canvas height="84" width="50" id="icon5"></canvas>
+                                            </center>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <div class="daily-weather">
+                                            <h2 class="day">기관 매매 주식</h2>
+                                            <h5 align="center">{{ GIGUAN | safe }}주</h5>
+                                            <!--기관 해 뜨면 샀다 비오면 팔았다 폰트 줄이기 TODO-->
+                                            <center>
+                                                <canvas height="84" width="50" id="icon6"></canvas>
+                                            </center>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">*아래는 업종별 평균대비 지표값입니다.</div>
+
+                                <div class="row weather-days">
+                                    <div class="col-sm-2">
+                                        <div class="daily-weather">
+                                            <h2 class="day">PER</h2>
+                                            <h4 align="center"><b>{{ WEATHER_DATA_LIST[0] | safe }}</b></h4>
+                                            <center>
+                                                <canvas height="84" width="50" id="icon0"></canvas>
+                                            </center>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="daily-weather">
+                                            <h2 class="day">PBR</h2>
+                                            <h4 align="center">{{ WEATHER_DATA_LIST[1] | safe }}</h4>
+                                            <center>
+                                                <canvas height="84" width="50" id="icon1"></canvas>
+                                            </center>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="daily-weather">
+                                            <h2 class="day">ROE</h2>
+
+                                            <h4 align="center">{{ WEATHER_DATA_LIST[2] | safe }}</h4>
+                                            <center>
+                                                <canvas height="84" width="50" id="icon2"></canvas>
+                                            </center>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="daily-weather">
+                                            <h2 class="day">EPS</h2>
+                                            <h4 align="center">{{ WEATHER_DATA_LIST[3] | safe }}</h4>
+                                            <center>
+                                                <canvas height="84" width="50" id="icon3"></canvas>
+                                            </center>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="daily-weather">
+                                            <h2 class="day">BPS</h2>
+                                            <h4 align="center">{{ WEATHER_DATA_LIST[4] | safe }}</h4>
+                                            <center>
+                                                <canvas height="84" width="50" id="icon4"></canvas>
+                                            </center>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 투자 예보 카드 끝 -->
+                </div>
+                <!-- 2번째 카드 row 끝 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="/static/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="/static/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="/static/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="/static/vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="/static/vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="/static/vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="/static/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="/static/vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="/static/vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="/static/vendors/Flot/jquery.flot.js"></script>
+    <script src="/static/vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="/static/vendors/Flot/jquery.flot.time.js"></script>
+    <script src="/static/vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="/static/vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="/static/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="/static/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="/static/vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="/static/vendors/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="/static/vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="/static/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="/static/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="/static/vendors/moment/min/moment.min.js"></script>
+    <script src="/static/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="/static/js/custom.js"></script>
+
+    <style>
+        .dataframe {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <style>
+        .dataframe {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <script>
+        var money = $('#money').text();
+        var money2 = money.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        $('#money').text(money2);
+
+        var money3 = $('#money2').text();
+        var money4 = money3.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        $('#money2').text(money4);
+
+        var money5 = $('#money3').text();
+        var money6 = money5.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        $('#money3').text(money6);
+
+        var money7 = $('#money4').text();
+        var money8 = money7.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        $('#money4').text(money8);
+
+        var money9 = $('#money5').text();
+        var money10 = money9.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        $('#money5').text(money10);
+
+        var money11 = $('#money6').text();
+        var money12 = money11.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        $('#money6').text(money12);
+
+        var money13 = $('#money7').text();
+        var money14 = money13.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        $('#money7').text(money14);
+
+        var money15 = $('#money8').text();
+        var money16 = money15.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        $('#money8').text(money16);
+
+        var money17 = $('#money9').text();
+        var money18 = money17.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        $('#money9').text(money18);
+
+        var money19 = $('#money10').text();
+        var money20 = money19.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        $('#money10').text(money20);
+
+        var money21 = $('#money11').text();
+        var money22 = money21.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        $('#money11').text(money22);
+
+        var money23 = $('#money12').text();
+        var money24 = money23.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        $('#money12').text(money24);
+    </script>
+
+    <script>
+        function comma(str) {
+            str = String(str);
+            return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+        }
+    </script>
+    
+    <script>
+        // Radar chart
+        // for문 돌려서 개수 선택할 수 있으면 좋을듯
+        var ctx = document.getElementById("MyRadar");
+        var data = {
+            labels: {{RD_LABEL_LIST | safe}},
+            datasets: [{
+                label: Object.keys({{RD_DATA_DICT[0] | safe}}),
+                {#backgroundColor: "rgba(3, 88, 106, 0.2)",#}
+                backgroundColor: "rgba(243, 112, 34, 0.2)",
+                {#borderColor: "rgba(3, 88, 106, 0.80)",#}
+                borderColor: "rgba(243, 112, 34, 0.85)",
+                {#pointBorderColor: "rgba(3, 88, 106, 0.80)",#}
+                pointBorderColor: "rgba(243, 112, 34, 0.85)",
+                {#pointBackgroundColor: "rgba(3, 88, 106, 0.80)",#}
+                pointBackgroundColor: "rgba(243, 112, 34, 0.85)",
+                pointHoverBackgroundColor: "#fff",
+                pointHoverBorderColor: "rgba(220,220,220,1)",
+                data: {{RD_DATA_DICT[0] | safe}}[Object.keys({{RD_DATA_DICT[0] | safe}})]
+            }, {
+                label: Object.keys({{RD_DATA_DICT[1] | safe}}),
+                {#backgroundColor: "rgba(38, 185, 154, 0.2)",#}
+                {#borderColor: "rgba(38, 185, 154, 0.85)",#}
+                {#pointColor: "rgba(38, 185, 154, 0.85)",#}
+                backgroundColor: "rgba(3, 88, 106, 0.2)",
+                borderColor: "rgba(3, 88, 106, 0.85)",
+                pointColor: "rgba(3, 88, 106, 0.85)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(151,187,205,1)",
+                data: {{RD_DATA_DICT[1] | safe}}[Object.keys({{RD_DATA_DICT[1] | safe}})]
+            }, {
+                label: Object.keys({{RD_DATA_DICT[2] | safe}}),
+                {#backgroundColor: "rgba(38, 185, 154, 0.2)",#}
+                {#borderColor: "rgba(0, 184, 95, 0.85)",#}
+                {#pointColor: "rgba(0, 184, 95, 0.85)",#}
+                backgroundColor: "rgba(38, 185, 154, 0.2)",
+                borderColor: "rgba(38, 185, 154, 0.85)",
+                pointColor: "rgba(38, 185, 154, 0.85)",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(151,187,205,1)",
+                data: {{RD_DATA_DICT[2] | safe}}[Object.keys({{RD_DATA_DICT[2] | safe}})]
+            }]
+        };
+
+        let canvasRadar = new Chart(ctx, {
+            type: 'radar',
+            data: data,
+        });
+    </script>
+
+    <script>
+        //투자의견 차트
+        let codes = {{MY_CODE | safe}}
+            twocolor = '#305ea2'
+        if (codes == 0.1) {
+            twocolor = '#F0F3F3'
+        } else if (codes <= 20) {
+            twocolor = '#305ea2'
+        } else if (codes > 20 && codes <= 40) {
+            twocolor = '#5793eb'
+        } else if (codes > 40 && codes <= 60) {
+            twocolor = '#66b828'
+        } else if (codes > 60 && codes <= 80) {
+            twocolor = '#fe8917'
+        } else {
+            twocolor = 'red'
+        }
+        let chart_gauge_settings = {
+            lines: 12,
+            angle: 0,
+            lineWidth: 0.4,
+            pointer: {
+                length: 0.75,
+                strokeWidth: 0.042,
+                color: '#1D212A'
+            },
+            limitMax: 'false',
+            colorStart: twocolor,
+            colorStop: twocolor,
+            strokeColor: '#F0F3F3',
+            generateGradient: true
+        };
+
+        if ($('#chart_gauge_01').length) {
+            let chart_gauge_01_elem = document.getElementById('chart_gauge_01');
+            let chart_gauge_01 = new Gauge(chart_gauge_01_elem).setOptions(chart_gauge_settings);
+        }
+
+        //데이터
+        if ($('#gauge-text').length) {
+            let chart_gauge_01_elem = document.getElementById('chart_gauge_01');//check
+            let chart_gauge_01 = new Gauge(chart_gauge_01_elem).setOptions(chart_gauge_settings);//check
+            chart_gauge_01.maxValue = 100;
+            chart_gauge_01.animationSpeed = 32;
+            chart_gauge_01.set({{MY_CODE | safe}});//넣기
+            chart_gauge_01.setTextField(document.getElementById("gauge-text"));
+
+        }
+    </script>
+
+    <script>
+        // Radar chart
+        var ctx = document.getElementById("MyBar");
+        var mybarChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: {{BAR_LABEL_LIST | safe}},
+                datasets: [{
+                    label: '매출액',
+                    backgroundColor: "#26B99A",
+                    data: {{BAR_DATA_LIST_MCH | safe}}
+                }, {
+                    label: '당기순이익',
+                    backgroundColor: "#03586A",
+                    data: {{BAR_DATA_LIST_DG | safe}}
+                }]
+            },
+
+            options: {
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            color: "rgba(0, 0, 0, 0)",
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            color: "rgba(0, 0, 0, 0)",
+                        },
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+
+    <script>
+
+        //$( "#search_input" ).keydown(function() {
+        $(document).on('keyup', '#search_input', function () {
+
+            $.ajax({
+                url: "/com_search_ajax",
+                type: "post",
+                data: {"search_input": $("#search_input").val()},
+                success: function (flask_return_str) {
+                    console.log(flask_return_str);
+
+                    flask_return_list = JSON.parse(flask_return_str)  //jquery
+                    console.log(flask_return_list);
+
+                    html_str = "<table border=1  bordercolor=#E6E9ED>"
+
+                    $.each(flask_return_list, function (i, v) {
+                        //i 0   v ['smith', 1400]
+                        //i 1   v ['allen', 4000]
+                        console.log(v[0], v[1]);
+                        html_str += "<tr><td><button style='background-color: #E6E9ED;border:0; outline:0;' class='ajax_com_name_btn' value=" + v[0] + " id=" + i + "_name >" + v[1] + "</button></td></tr>"    //script
+                    });
+                    html_str += "</table>"
+                    $("#resdiv").empty();
+                    $("#resdiv").html(html_str);
+                },
+                error: function (res) {
+                },
+                crossDomain: true
+
+            });
+        });
+
+        $(document).on("click", "#jamybody", function () {
+            $("#resdiv").empty();
+        });
+
+        $(document).on("click", ".ajax_com_name_btn", function () {
+            $("#hidden_stock_code").attr("value", $(this).val())
+            $("#hidden_corp_name").attr("value", $(this).text())
+            $("#myform").attr("action", "/form_submit_get")
+            $("#myform").attr("method", "get")
+            $("#myform").submit();
+            console.log($(this).val());
+            $('.input-group').css("opacity", 0);
+            $(".ajax_com_name_btn").disabled = true;
+            $("#search_input").prop('disabled', true);
+
+            $('#searchman').empty()
+            let html_str = "<div class='loader' style='margin-top:20%;margin-left:45%;'></div><div class='loading' style='margin-left:45%;margin-bottom:300px;'><h1 class='lightgreen'><span>L</span><span>O</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span></h1></div>"
+            $('#searchman').html(html_str);
+
+
+        });
+
+        $(document).on("click", '#search_input', function () {
+
+            $.ajax({
+                url: "/com_search_ajax",
+                type: "post",
+                data: {"search_input": $("#search_input").val()},
+                success: function (flask_return_str) {
+                    console.log(flask_return_str);
+
+                    flask_return_list = JSON.parse(flask_return_str)
+                    console.log(flask_return_list);
+
+                    html_str = "<table border=1  bordercolor=#E6E9ED>"
+
+                    $.each(flask_return_list, function (i, v) {
+                        //i 0   v ['smith', 1400]
+                        //i 1   v ['allen', 4000]
+                        console.log(v[0], v[1]);
+                        html_str += "<tr><td><button style='background-color: #E6E9ED;border:0; outline:0;' class='ajax_com_name_btn' value=" + v[0] + " id=" + i + "_name >" + v[1] + "</button></td></tr>"    //script
+                    });
+                    html_str += "</table>"
+                    $("#resdiv").empty();
+                    $("#resdiv").html(html_str);
+                },
+                error: function (res) {
+                },
+                crossDomain: true
+
+            });
+        });
+    </script>
+
+    <script src="/static/vendors/skycons/skycons.js"></script>
+
+    <script>
+        skycons = new Skycons({"color": "#42C1A7"});
+
+        skycons.add("icon0", Skycons.{{ICONS[0] | safe}});
+        skycons.add("icon1", Skycons.{{ICONS[1] | safe}});
+        skycons.add("icon2", Skycons.{{ICONS[2] | safe}});
+        skycons.add("icon3", Skycons.{{ICONS[3] | safe}});
+        skycons.add("icon4", Skycons.{{ICONS[4] | safe}});
+
+        skycons.add("icon5", Skycons.{{ICONS2[0] | safe}});
+        skycons.add("icon6", Skycons.{{ICONS2[1] | safe}});
+
+        skycons.play();
+    </script>
+</body>
+</html>
