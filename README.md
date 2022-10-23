@@ -30,8 +30,7 @@
 # 2. 프로젝트 구성
 
 ## 2-1 아키텍쳐
-![아키텍쳐1](/asset/architecture.png)
-
+![아키텍쳐1](/asset/architecture.png)<br><br>
 ![아키텍쳐2](/asset/architecture2.png)
    
 ## 2-2 ERD
