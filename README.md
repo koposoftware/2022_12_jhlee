@@ -9,11 +9,7 @@
    <img src="asset/logo.png" width="400" height="135">
 </div>
 
-<div align="center">
-   <p>
-      [프로젝트 홈페이지 - https://koposoftware.github.io/2022_12_jhlee/](https://koposoftware.github.io/2022_12_jhlee/)
-   </p>
-</div>
+[프로젝트 홈페이지 - https://koposoftware.github.io/2022_12_jhlee/](https://koposoftware.github.io/2022_12_jhlee/)
 
 <hr>
 
