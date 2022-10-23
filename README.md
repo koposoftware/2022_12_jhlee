@@ -10,7 +10,9 @@
 </div>
 
 <div align="center">
-   [프로젝트 홈페이지 - https://koposoftware.github.io/2022_12_jhlee/](https://koposoftware.github.io/2022_12_jhlee/)
+   <p>
+      [프로젝트 홈페이지 - https://koposoftware.github.io/2022_12_jhlee/](https://koposoftware.github.io/2022_12_jhlee/)
+   </p>
 </div>
 
 <hr>
