@@ -82,17 +82,15 @@
 # 5. 본인 소개
 
 |이름 |이정환|![이정환](/asset/이정환.jpg)|
-|연락처 | ljhwan8111@naver.com|
+|연락처 |ljhwan8111@naver.com|
 |skill set| Language - C, JAVA, Python, HTML/CSS/Javascript|
 | | Frameword - Spring, Flask, React, JPAOracle, MySQL|
 | | Database - Oracle, MySQL|
 | | Etc - Oracle Cloud, Git|
-|자격증| 정보처리기사(필기)|
-| 2021.05| |
-|| |
+|자격증| 정보처리기사(필기)| 2021.05|
+| | |
 |수상| |
 | | |
 |특기사항| 당구 꽤나 침|
-|| |
-|교육| 이노베이션 아카데미(42 Seoul) - C, Linux(2021.11 – 2022.02)|
-|| |
+|교육| 이노베이션 아카데미(42 Seoul)| 2021.11 ~ 2022.02|
+| | 하나금융티아이 채용연계형 교육| 2022.03 ~ 현재|
