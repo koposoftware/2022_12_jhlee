@@ -5,8 +5,6 @@
    <img src="asset/logo.png" width="400" height="135">
 </div>
 
-[프로젝트 홈페이지 - https://koposoftware.github.io/2022_12_jhlee/](https://koposoftware.github.io/2022_12_jhlee/)
-
 <hr>
 
 ## 1. 프로젝트 개요
@@ -105,3 +103,5 @@
 |특기사항| 당구 꽤나 침|
 |교육| 이노베이션 아카데미(42 Seoul)| 2021.11 ~ 2022.02|
 | | 하나금융티아이 채용연계형 교육| 2022.03 ~ 현재|
+
+[프로젝트 홈페이지 - https://koposoftware.github.io/2022_12_jhlee/](https://koposoftware.github.io/2022_12_jhlee/)
