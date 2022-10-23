@@ -1,5 +1,7 @@
 <div align="center">
-   # HINT, 투자 정보 플랫폼
+   <h1>
+      HINT, 투자 정보 플랫폼
+   </h1>
 </div>
 
 <!-- ![로고](/asset/logo.png) -->
