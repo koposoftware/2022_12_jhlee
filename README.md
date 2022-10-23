@@ -1,5 +1,5 @@
 # HINT, 투자 정보 플랫폼
-<img src="logo.png" width="400" height="150"/>
+<img src="logo.png" width="400" height="135"/>
 
 [프로젝트 홈페이지 - https://koposoftware.github.io/finalproject_template/](https://koposoftware.github.io/finalproject_template/)
 
