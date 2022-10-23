@@ -61,7 +61,8 @@
 # 4. 프로젝트 결과
    
 ## 4-1 발표 ppt
-[[발표자료](/asset/발표ppt.png)](/asset/발표ppt.pptx)
+![발표자료이미지](/asset/발표ppt.png)<br>
+[발표자료](/asset/발표ppt.pptx)
 
 ## 4-2 시연 동영상
 [![영상](/asset/link.png)](https://github.com/koposoftware/2022_12_jhlee)
