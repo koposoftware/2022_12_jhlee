@@ -1,4 +1,4 @@
-# HINT, 투자 정보 플랫폼
+# **HINT, 투자 정보 플랫폼**
 <!-- ![로고](/asset/logo.png) -->
 <img src="asset/logo.png" width="400" height="135">
 
