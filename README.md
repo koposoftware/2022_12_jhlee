@@ -87,10 +87,12 @@
 | | Frameword - Spring, Flask, React, JPAOracle, MySQL|
 | | Database - Oracle, MySQL|
 | | Etc - Oracle Cloud, Git|
-|자격증| |
+|자격증| 정보처리기사(필기)|
+| 2021.05| |
 || |
 |수상| |
 | | |
-|특기사항| |
+|특기사항| 당구 꽤나 침|
 || |
 |교육| 이노베이션 아카데미(42 Seoul) - C, Linux(2021.11 – 2022.02)|
+|| |
