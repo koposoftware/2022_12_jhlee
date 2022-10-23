@@ -1,4 +1,3 @@
-[프로젝트 홈페이지 - https://koposoftware.github.io/2022_12_jhlee/](https://koposoftware.github.io/2022_12_jhlee/)
 <div align="center">
    <h1>
       HINT, 투자 정보 플랫폼
@@ -108,3 +107,6 @@
 |특기사항| 당구 꽤나 침|
 |교육| 이노베이션 아카데미(42 Seoul)| 2021.11 ~ 2022.02|
 | | 하나금융티아이 채용연계형 교육| 2022.03 ~ 현재|
+
+[프로젝트 홈페이지 - https://koposoftware.github.io/2022_12_jhlee/](https://koposoftware.github.io/2022_12_jhlee/)
+
