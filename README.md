@@ -35,26 +35,16 @@
 
 ## 사용기술
 - SpringBoot 기반 웹개발
-- Python의 KoNLPy를 이용한 텍스트마이닝
-  : WordCloud(React) 시각화
-- WordCloud 키워드 선택시 검색 기능 제공
-  : QueryDSL를 이용한 동적쿼리문 처리
-- 주가 제공 시스템 API 서버 구축
-  : Oracle Cloud, Flask
-- 대용량 데이터 활용
-  : Oracle Cloud, MySQL
-  : 약 1000만건의 주식 일봉, 재무제표 데이터
+- Python의 KoNLPy를 이용한 텍스트마이닝: WordCloud(React) 시각화
+- WordCloud 키워드 선택시 검색 기능 제공: QueryDSL를 이용한 동적쿼리문 처리
+- 주가 제공 시스템 API 서버 구축: Oracle Cloud, Flask
+- 대용량 데이터 활용: Oracle Cloud, MySQL -> 약 1000만건의 주식 일봉, 재무제표 데이터
 - Axios(React) 비동기 통신을 이용한 화면 갱신
-- APScheduler를 이용한 데이터베이스 갱신(데이터 삽입)
-  : 뉴스, 주식 일봉데이터
-- 종목별 일봉과 재무제표를 활용한 데이터 분석
-  : ython, Jupyter Notebook, Pandas, Numpy 등
-- Plotly(차트 라이브러리)를 통한 분석 데이터 시각화
-  : Python, Flask
-- 프랙탈 패턴 기반 주가 추세 예측
-  : Python, Jupyter Notebook
-- Prophet(시계열 예측 라이브러리)를 이용한 주가 추세 예측
-  : Python, Jupyter Notebook
+- APScheduler를 이용한 데이터베이스 갱신(데이터 적재): 뉴스, 주식 일봉데이터
+- 종목별 일봉과 재무제표를 활용한 데이터 분석: ython, Jupyter Notebook, Pandas, Numpy 등
+- Plotly(차트 라이브러리)를 통한 분석 데이터 시각화: Python, Flask
+- 프랙탈 패턴 기반 주가 추세 예측: Python, Jupyter Notebook
+- Prophet(시계열 예측 라이브러리)를 이용한 주가 추세 예측: Python, Jupyter Notebook
 
 ## 주가 제공 시스템(API Server, Oracle Cloud)
 <img src="api.png"/>
