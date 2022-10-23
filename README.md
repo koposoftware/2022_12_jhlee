@@ -1,9 +1,6 @@
 # <center><b>HINT, 투자 정보 플랫폼</b></center> 
 
-<!-- ![로고](/asset/logo.png) -->
-<div align="center">
-   <img src="asset/logo.png" width="400" height="135">
-</div>
+<center><img src="asset/logo.png" width="400" height="135"></center>
 
 <hr>
 
