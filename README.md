@@ -1,7 +1,7 @@
 # HINT, 투자 정보 플랫폼
 <img src="logo.png" width="400" height="135"/>
 
-[프로젝트 홈페이지 - https://koposoftware.github.io/finalproject_template/](https://koposoftware.github.io/finalproject_template/)
+[프로젝트 홈페이지 - https://koposoftware.github.io/2022_12_jhlee/](https://koposoftware.github.io/2022_12_jhlee/)
 
 # 1. 프로젝트 개요
 
