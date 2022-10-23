@@ -1,5 +1,5 @@
 # HINT, 투자 정보 플랫폼
-![로고](/asset/intro.png){: width="400" height="135"}
+![로고](/asset/logo.png){: width="400" height="135"}
 
 [프로젝트 홈페이지 - https://koposoftware.github.io/2022_12_jhlee/](https://koposoftware.github.io/2022_12_jhlee/)
 
@@ -59,12 +59,10 @@
 
 # 4. 프로젝트 결과
    
-## 4-1 발표 ppt 
-
+## 4-1 발표 ppt
 [발표자료<img src="/asset/발표ppt.png"/>](/asset/발표ppt.pptx)<br>
 
-## 4-2 시연 동영상 
-
+## 4-2 시연 동영상
 [![영상](/asset/link.png)](https://github.com/koposoftware/2022_12_jhlee)
   
 ## 4-3 기대효과
