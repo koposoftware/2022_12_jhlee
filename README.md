@@ -21,7 +21,7 @@
 ```
 
 ## 1-2 수행기간
-<img src="gant.png"/><br>
+<img src="/asset/gant.png"/><br>
 
 # 2. 프로젝트 구성
 
