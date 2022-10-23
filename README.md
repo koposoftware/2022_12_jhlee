@@ -66,7 +66,7 @@
 
 ## 4-2 시연 동영상 
 
-  <iframe width="424" height="238" src="https://www.youtube.com/embed/reOGfxYJre0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![영상](link.png)](https://)
   
 ## 4-3 기대효과
 - 다양한 투자 정보 제공으로 손님 유치
