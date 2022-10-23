@@ -84,9 +84,9 @@
 |이름 |이정환|![이정환](/asset/이정환.jpg)|
 |연락처 |ljhwan8111@naver.com|
 |skill set| Language - C, JAVA, Python, HTML/CSS/Javascript|
-| | Frameword - Spring, Flask, React, JPAOracle, MySQL|
+| | Frameword - Spring(Boot), Flask, React, JPA|
 | | Database - Oracle, MySQL|
-| | Etc - Oracle Cloud, Git|
+| | Etc - Git, Oracle Cloud|
 |자격증| 정보처리기사(필기)| 2021.05|
 | | |
 |수상| |
