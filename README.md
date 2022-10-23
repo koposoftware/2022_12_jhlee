@@ -50,18 +50,18 @@
 ![api](/asset/api.png)
 
 # 3. 기능 설명
-![기능1](/asset/f1.png)
-![기능2](/asset/f2.png)
-![기능3](/asset/f3.png)
-![기능4](/asset/f4.png)
-![기능5](/asset/f5.png)
-![기능6](/asset/f6.png)
-![기능7](/asset/f7.png)
+![기능1](/asset/f1.png)<br><br>
+![기능2](/asset/f2.png)<br><br>
+![기능3](/asset/f3.png)<br><br>
+![기능4](/asset/f4.png)<br><br>
+![기능5](/asset/f5.png)<br><br>
+![기능6](/asset/f6.png)<br><br>
+![기능7](/asset/f7.png)<br><br>
 
 # 4. 프로젝트 결과
    
 ## 4-1 발표 ppt
-[발표자료](/asset/발표ppt.png)(/asset/발표ppt.pptx)<br>
+[[발표자료](/asset/발표ppt.png)](/asset/발표ppt.pptx)
 
 ## 4-2 시연 동영상
 [![영상](/asset/link.png)](https://github.com/koposoftware/2022_12_jhlee)
