@@ -1,6 +1,5 @@
-<div align="center">
-   # HINT, 투자 정보 플랫폼
-</div>
+# <center>HINT, 투자 정보 플랫폼</center>
+
 <!-- ![로고](/asset/logo.png) -->
 <div align="center">
    <img src="asset/logo.png" width="400" height="135">
@@ -12,13 +11,13 @@
 
 <hr>
 
-# 1. 프로젝트 개요
+## 1. 프로젝트 개요
 ![배경](/asset/intro.png)
 
 - 주식 거래 이용자수가 증가하고, 무분별한 투자가 증가함에 따라 부정적인 결과가 나오고 있습니다.
 - 투자자들에게 합리적인 투자정보 즉, 힌트를 제공하고자 합니다.
 
-## 1-1 개발환경
+### 1-1 개발환경
 
 ```
 - Macbook Pro(macOS Monterey) M1 pro chip(10-core cpu) 16GB(RAM) 1TB
@@ -28,21 +27,21 @@
 - Cloud : Oracle Cloud(Oracle Linux8(1-core, 1GB(RAM), 50GB) / Ubuntu 21.04(4-core, 24GB(RAM), 100GB))
 ```
 
-## 1-2 수행기간
+### 1-2 수행기간
 ![간트](/asset/gant.png)
 
 <hr>
 
-# 2. 프로젝트 구성
+## 2. 프로젝트 구성
 
-## 2-1 아키텍쳐
+### 2-1 아키텍쳐
 ![아키텍쳐1](/asset/architecture.png)<br><br>
 ![아키텍쳐2](/asset/architecture2.png)
    
-## 2-2 ERD
+### 2-2 ERD
 ![erd](/asset/erd.png)
 
-## 2-3 사용기술
+### 2-3 사용기술
 - SpringBoot 기반 웹개발
 - Python의 KoNLPy를 이용한 텍스트마이닝: WordCloud(React) 시각화
 - WordCloud 키워드 선택시 검색 기능 제공: QueryDSL를 이용한 동적쿼리문 처리
@@ -55,12 +54,12 @@
 - 프랙탈 패턴 기반 주가 추세 예측: Python, Jupyter Notebook
 - Prophet(시계열 예측 라이브러리)를 이용한 주가 추세 예측: Python, Jupyter Notebook
 
-## 2-4 주가 제공 시스템(API Server, Oracle Cloud)
+### 2-4 주가 제공 시스템(API Server, Oracle Cloud)
 ![api](/asset/api.png)
 
 <hr>
 
-# 3. 기능 설명
+## 3. 기능 설명
 ![기능1](/asset/f1.png)<br><br>
 ![기능2](/asset/f2.png)<br><br>
 ![기능3](/asset/f3.png)<br><br>
@@ -71,20 +70,20 @@
 
 <hr>
 
-# 4. 프로젝트 결과
+## 4. 프로젝트 결과
    
-## 4-1 발표 ppt
+### 4-1 발표 ppt
 ![발표자료이미지](/asset/발표ppt.png)<br>
 [발표자료](/asset/발표ppt.pptx)
 
-## 4-2 시연 동영상
+### 4-2 시연 동영상
 [![영상](/asset/link.png)](https://github.com/koposoftware/2022_12_jhlee)
   
-## 4-3 기대효과
+### 4-3 기대효과
 - 다양한 투자 정보 제공으로 손님 유치
 - 추후 구독서비스 전환으로 이익창출 도모
 
-## 4-4 보완사항
+### 4-4 보완사항
 - 투자 성향 진단 API 제공
 - 웹소켓과 증권 API를 이용한 실시간 주가
   (현재는 크롤링 기반으로 제약사항이 많음)
@@ -93,7 +92,7 @@
 
 <hr>
 
-# 5. 본인 소개
+## 5. 본인 소개
 
 |이름 |이정환|![이정환](/asset/이정환.jpg)|
 |연락처 |ljhwan8111@naver.com|
