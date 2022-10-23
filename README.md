@@ -4,6 +4,8 @@
 
 [프로젝트 홈페이지 - https://koposoftware.github.io/2022_12_jhlee/](https://koposoftware.github.io/2022_12_jhlee/)
 
+<hr>
+
 # 1. 프로젝트 개요
 ![배경](/asset/intro.png)
 
@@ -22,6 +24,8 @@
 
 ## 1-2 수행기간
 ![간트](/asset/gant.png)
+
+<hr>
 
 # 2. 프로젝트 구성
 
