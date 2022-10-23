@@ -1,11 +1,10 @@
 # HINT, 투자 정보 플랫폼
-<img src="/asset/logo.png" width="400" height="135"/>
+[![배경](/asset/intro.png)]
 
 [프로젝트 홈페이지 - https://koposoftware.github.io/2022_12_jhlee/](https://koposoftware.github.io/2022_12_jhlee/)
 
 # 1. 프로젝트 개요
-
-<img src="/asset/intro.png"/><br>
+[![배경](/asset/intro.png)]
 
 - 주식 거래 이용자수가 증가하고, 무분별한 투자가 증가함에 따라 부정적인 결과가 나오고 있습니다.
 - 투자자들에게 합리적인 투자정보 즉, 힌트를 제공하고자 합니다.
@@ -21,17 +20,17 @@
 ```
 
 ## 1-2 수행기간
-<img src="/asset/gant.png"/><br>
+[![간트](/asset/gant.png)]
 
 # 2. 프로젝트 구성
 
 ## 2-1 아키텍쳐
-<img src="/asset/architecture.png"/>
+[![아키텍쳐1](/asset/architecture.png)]
 
-<img src="/asset/architecture2.png"/>
+[![아키텍쳐2](/asset/architecture2.png)]
    
 ## 2-2 ERD
-<img src="/asset/erd.png"/>
+[![erd](/asset/erd.png)]
 
 ## 2-3 사용기술
 - SpringBoot 기반 웹개발
@@ -47,16 +46,16 @@
 - Prophet(시계열 예측 라이브러리)를 이용한 주가 추세 예측: Python, Jupyter Notebook
 
 ## 2-4 주가 제공 시스템(API Server, Oracle Cloud)
-<img src="/asset/api.png"/>
+[![api](/asset/api.png)]
 
 # 3. 기능 설명
-<img src="/asset/f1.png"/>
-<img src="/asset/f2.png"/>
-<img src="/asset/f3.png"/>
-<img src="/asset/f4.png"/>
-<img src="/asset/f5.png"/>
-<img src="/asset/f6.png"/>
-<img src="/asset/f7.png"/>
+[![기능1](/asset/f1.png)]
+[![기능2](/asset/f1.png)]
+[![기능3](/asset/f1.png)]
+[![기능4](/asset/f1.png)]
+[![기능5](/asset/f1.png)]
+[![기능6](/asset/f1.png)]
+[![기능7](/asset/f1.png)]
 
 # 4. 프로젝트 결과
    
