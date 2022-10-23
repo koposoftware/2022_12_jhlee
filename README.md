@@ -53,6 +53,8 @@
 ## 2-4 주가 제공 시스템(API Server, Oracle Cloud)
 ![api](/asset/api.png)
 
+<hr>
+
 # 3. 기능 설명
 ![기능1](/asset/f1.png)<br><br>
 ![기능2](/asset/f2.png)<br><br>
@@ -61,6 +63,8 @@
 ![기능5](/asset/f5.png)<br><br>
 ![기능6](/asset/f6.png)<br><br>
 ![기능7](/asset/f7.png)<br><br>
+
+<hr>
 
 # 4. 프로젝트 결과
    
@@ -81,6 +85,8 @@
   (현재는 크롤링 기반으로 제약사항이 많음)
 - 분석을 기반으로 테스트를 해볼 수 매수/매도 기능 제공
 - 주식 초보자들을 위한 차트 도우미 제공
+
+<hr>
 
 # 5. 본인 소개
 
