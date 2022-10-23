@@ -1,8 +1,8 @@
-# **HINT, 투자 정보 플랫폼**
+<center> # **HINT, 투자 정보 플랫폼** </center>
 <!-- ![로고](/asset/logo.png) -->
-<img src="asset/logo.png" width="400" height="135">
+<center> <img src="asset/logo.png" width="400" height="135"> </center>
 
-[프로젝트 홈페이지 - https://koposoftware.github.io/2022_12_jhlee/](https://koposoftware.github.io/2022_12_jhlee/)
+<center> [프로젝트 홈페이지 - https://koposoftware.github.io/2022_12_jhlee/](https://koposoftware.github.io/2022_12_jhlee/) </center>
 
 <hr>
 
