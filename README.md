@@ -70,7 +70,7 @@
 [발표자료](/asset/발표ppt.pptx)
 
 ### 4-2 시연 동영상
-[![영상](/asset/link.png)](https://github.com/koposoftware/2022_12_jhlee)
+[![영상](/asset/link.png)](https://youtu.be/2L2SE8yQ72w)
   
 ### 4-3 기대효과
 - 다양한 투자 정보 제공으로 손님 유치
