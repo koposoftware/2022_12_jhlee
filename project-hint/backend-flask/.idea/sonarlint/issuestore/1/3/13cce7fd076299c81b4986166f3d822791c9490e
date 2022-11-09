@@ -1,9 +1,0 @@
-
-;python:S125 "Remove this commented out code.(åßëäûÿÿÿÿ
-Lpython:S1656'"/Remove or correct this useless self-assignment.(íÌéŸıÿÿÿÿ
-Gpython:S1656("/Remove or correct this useless self-assignment.(šˆÏ•
-Gpython:S1656D"/Remove or correct this useless self-assignment.(›ÌĞ–
-Apython:S1481f")Remove the unused local variable "today".(Ã†“
-Ipython:S1751i"1Refactor this loop to do more than one iteration.(¸ÚºÂ
-6python:S125L"Remove this commented out code.(åµÉ
-Gpython:S1656q"/Remove or correct this useless self-assignment.(›ÌĞ–

@@ -1,13 +1,0 @@
-
-vpython:S1542"YRename function "getListedStockCodes" to match the regular expression ^[a-z_][a-z0-9_]*$.(¶ì­èıÿÿÿÿ
-Cpython:S5806"+Rename this variable; it shadows a builtin.(Ğ‘‚Ş
-npython:S1542'"QRename function "getKrxCodes" to match the regular expression ^[a-z_][a-z0-9_]*$.(Âù°ùÿÿÿÿ
-rpython:S15424"ZRename function "getCurrentStockPrice" to match the regular expression ^[a-z_][a-z0-9_]*$.(Éüó…
-|python:S1542@"_Rename function "getCurrentStockPriceToInt" to match the regular expression ^[a-z_][a-z0-9_]*$.(º¡»µúÿÿÿÿ
-npython:S1542K"VRename function "distinctAndSplit" to match the regular expression ^[a-z_][a-z0-9_]*$.(ùÊÇÄ
-ypython:S1542O"\Rename function "fetchCurrentStockPrice" to match the regular expression ^[a-z_][a-z0-9_]*$.(‰ÿâ‡ıÿÿÿÿ
-~python:S1542Y"aRename function "fetchCurrentStockPriceToInt" to match the regular expression ^[a-z_][a-z0-9_]*$.(¼Œ™Áıÿÿÿÿ
-;python:S125u"Remove this commented out code.(²·Ä‰úÿÿÿÿ
-Bpython:S125~"Remove this commented out code.(áıÁÿÿÿÿÿ8ĞŞŒú¸0
-<python:S125"Remove this commented out code.(‚ÆºÎşÿÿÿÿ
-<python:S125…"Remove this commented out code.(²·Ä‰úÿÿÿÿ

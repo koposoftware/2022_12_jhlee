@@ -1,25 +1,0 @@
-
-rpython:S1192_"UDefine a constant instead of duplicating this literal '2022/03 ìë³¸ì´ê³„' 3 times.(õÜãÉúÿÿÿÿ
-hpython:S11922"PDefine a constant instead of duplicating this literal 'ì•ˆì •ì¶”êµ¬í˜•' 3 times.(Ñ·ú›
-mpython:S11924"PDefine a constant instead of duplicating this literal 'ê³µê²©íˆ¬ìí˜•' 3 times.(¹ºª¸úÿÿÿÿ
-mpython:S11923"PDefine a constant instead of duplicating this literal 'ìœ„í—˜ì¤‘ë¦½í˜•' 3 times.(ÌìõÏıÿÿÿÿ
-opython:S1192P"RDefine a constant instead of duplicating this literal '2022/06 GP/A Rank' 8 times.(ÿË¹„úÿÿÿÿ
-npython:S1192N"QDefine a constant instead of duplicating this literal 'ìƒì¥ì£¼ì‹ìˆ˜' 11 times.(ŸÁ¯òüÿÿÿÿ
-ipython:S1192Q"QDefine a constant instead of duplicating this literal '2022/06 PBR Rank' 8 times.(ÉÈä‰
-lpython:S1192|"ODefine a constant instead of duplicating this literal '2021 GP/A Rank' 4 times.(è¿èıÿÿÿÿ
-ipython:S1192d"QDefine a constant instead of duplicating this literal '2022/03 PBR Rank' 6 times.(„§´ 
-jpython:S1192c"RDefine a constant instead of duplicating this literal '2022/03 GP/A Rank' 6 times.(ÑÑˆ¨
-cpython:S1192R"KDefine a constant instead of duplicating this literal 'Total Rank' 8 times.(“íªˆ
-kpython:S1192}"NDefine a constant instead of duplicating this literal '2021 PBR Rank' 4 times.(–Öæøÿÿÿÿ
-upython:S1192^"XDefine a constant instead of duplicating this literal '2022/03 ë§¤ì¶œì´ì´ìµ' 3 times.(àüØÉøÿÿÿÿ
-rpython:S1192^"UDefine a constant instead of duplicating this literal '2022/03 ìì‚°ì´ê³„' 3 times.(àüØÉøÿÿÿÿ
-rpython:S1192M"UDefine a constant instead of duplicating this literal '2022/06 ìì‚°ì´ê³„' 4 times.(ùæõÿÿÿÿÿ
-mpython:S11923"PDefine a constant instead of duplicating this literal 'ì ê·¹íˆ¬ìí˜•' 4 times.(ÌìõÏıÿÿÿÿ
-upython:S1192M"XDefine a constant instead of duplicating this literal '2022/06 ë§¤ì¶œì´ì´ìµ' 4 times.(ùæõÿÿÿÿÿ
-rpython:S1192N"UDefine a constant instead of duplicating this literal '2022/06 ìë³¸ì´ê³„' 4 times.(ŸÁ¯òüÿÿÿÿ
-Hpython:S1066µ"/Merge this if statement with the enclosing one.(Ôå‘ò
-Hpython:S1066»"/Merge this if statement with the enclosing one.(¨Ãğ
-python:S101"tRename class "Recommendation_Stock_Model" to match the regular expression ^_?([A-Z_][a-zA-Z0-9]*|[a-z_][a-z0-9_]*)$.(ÓÜÁàùÿÿÿÿ
-lpython:S37767"TRefactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.(Ñ†Âå
-Hpython:S1481Ä"*Remove the unused local variable "symbol".(¿®‰§üÿÿÿÿ
-<python:S125²"Remove this commented out code.(ˆ˜üñıÿÿÿÿ

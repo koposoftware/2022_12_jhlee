@@ -1,23 +1,0 @@
-
-Bpython:S1481)"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
-qpython:S3776
-"TRefactor this function to reduce its Cognitive Complexity from 16 to the 15 allowed.(»Ø„õıÿÿÿÿ
-ypython:S117]"]Rename this local variable "ê¸°ê°„êµ¬ë¶„" to match the regular expression ^[_a-z][a-z0-9_]*$.(çşÏƒÿÿÿÿÿ
-npython:S117_"WRename this local variable "ë‚ ì§œ" to match the regular expression ^[_a-z][a-z0-9_]*$.( —ş
-wpython:S117_"`Rename this local variable "ë‹¹ê¸°ìˆœì´ìµ" to match the regular expression ^[_a-z][a-z0-9_]*$.( —ş
-qpython:S117_"ZRename this local variable "ë§¤ì¶œì•¡" to match the regular expression ^[_a-z][a-z0-9_]*$.( —ş
-wpython:S117_"`Rename this local variable "ë°œí–‰ì£¼ì‹ìˆ˜" to match the regular expression ^[_a-z][a-z0-9_]*$.( —ş
-wpython:S117_"`Rename this local variable "ë°°ë‹¹ìˆ˜ìµë¥ " to match the regular expression ^[_a-z][a-z0-9_]*$.( —ş
-tpython:S117_"]Rename this local variable "ë¶€ì±„ë¹„ìœ¨" to match the regular expression ^[_a-z][a-z0-9_]*$.( —ş
-tpython:S117_"]Rename this local variable "ë¶€ì±„ì´ê³„" to match the regular expression ^[_a-z][a-z0-9_]*$.( —ş
-tpython:S117_"]Rename this local variable "ìˆœì´ìµë¥ " to match the regular expression ^[_a-z][a-z0-9_]*$.( —ş
-tpython:S117_"]Rename this local variable "ì˜ì—…ì´ìµ" to match the regular expression ^[_a-z][a-z0-9_]*$.( —ş
-wpython:S117_"`Rename this local variable "ì˜ì—…ì´ìµë¥ " to match the regular expression ^[_a-z][a-z0-9_]*$.( —ş
-qpython:S117_"ZRename this local variable "ìœ ë³´ìœ¨" to match the regular expression ^[_a-z][a-z0-9_]*$.( —ş
-qpython:S117_"ZRename this local variable "ìë³¸ê¸ˆ" to match the regular expression ^[_a-z][a-z0-9_]*$.( —ş
-tpython:S117_"]Rename this local variable "ìë³¸ì´ê³„" to match the regular expression ^[_a-z][a-z0-9_]*$.( —ş
-tpython:S117_"]Rename this local variable "ìì‚°ì´ê³„" to match the regular expression ^[_a-z][a-z0-9_]*$.( —ş
-ypython:S117`"]Rename this local variable "ì¢…ëª©ì½”ë“œ" to match the regular expression ^[_a-z][a-z0-9_]*$.(ˆŠØ­ûÿÿÿÿ
-Bpython:S1481W"%Remove the unused local variable "e".(¼–¯¸ÿÿÿÿÿ
-qpython:S3776G"TRefactor this function to reduce its Cognitive Complexity from 20 to the 15 allowed.(õğÅëüÿÿÿÿ
-6python:S125s"Remove this commented out code.(Ê·ó¥
